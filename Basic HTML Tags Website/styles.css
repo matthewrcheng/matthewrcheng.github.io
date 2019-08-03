@@ -1,0 +1,54 @@
+.title {
+    color: aqua;
+    font-size: 30px;
+    font-weight: bold;
+}
+.author {
+    color: aquamarine;
+    font-size: 14px;
+}
+.header {
+    background-color: darkslategray;
+    font-family: Helvetica;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+.tablelarge {
+    font-size: 20px;
+}
+.tablesmall {
+    font-size: 14px;
+}
+tbody {
+    background-color: gray;
+    color: gold;
+    font-family: Impact;
+    text-align: center;
+}
+.code {
+    background-color: black;
+    color: white;
+    font-family: monospace;
+}
+p {
+    background-color: rgb(85, 16, 16);
+    color: white;
+    font-size: 22px;
+    font-family: Helvetica;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.top {
+    position: relative;
+    bottom: 12px;
+}
+
+p a {
+    color: rgb(206, 121, 121);
+}
+
+.table {
+    width: 100%;
+}
