@@ -89,7 +89,7 @@ blockquote p:last-child {
 /* Full size background image */
 html, #container, .inner { background-color:transparent;}
 html {
-  background:url(background.jpg) center center no-repeat fixed;
+  background:url(img/background.jpeg) center center no-repeat fixed;
   background-size:cover;
 }
 body {
@@ -97,19 +97,24 @@ body {
   margin:25px auto;
 }
 header, #content, footer { 
-  background: rgba(0,0,0,.8); 
+  background: rgba(0, 136, 255, 0.848); 
   padding:25px;
   color:#FFFFFF; 
 }
 
+header, footer {
+  text-align: center;
+}
+
 /* Menu Links */
 ul.main-menu {
-  margin: 0;
+  margin: auto;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
+  justify-content: center;
   list-style: none;
+  width: 80%;
 }
 ul.main-menu li a {
   margin-right:20px;
@@ -131,4 +136,20 @@ ul.main-menu li a.active {
 }
 .show {
   display:block;
+}
+.column3 {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  text-align: center;
+}
+.column2 {
+  float: left;
+  width: 30%;
+  padding: 10px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
