@@ -98,7 +98,8 @@ body {
 }
 header, #content, footer { 
   color:#000000;
-  background:#FFFFFF
+  background:#FFFFFF;
+  padding:25px;
 }
 
 header, footer {
