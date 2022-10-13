@@ -97,13 +97,15 @@ body {
   margin:25px auto;
 }
 header, #content, footer { 
-  background: rgba(0, 136, 255, 0.848); 
-  padding:25px;
-  color:#FFFFFF; 
+  color:#000000;
+  background:#FFFFFF
 }
 
 header, footer {
   text-align: center;
+  background: rgba(0, 136, 255, 0.848); 
+  padding:25px;
+  color:#FFFFFF; 
 }
 
 /* Menu Links */
