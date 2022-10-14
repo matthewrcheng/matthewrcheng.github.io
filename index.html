@@ -43,34 +43,90 @@
           <div id="home" class="content-region hide">
             <h1>Personal Projects</h1>
             <h2>Completed</h2>
-            <h3><a href = https://github.com/matthewcheng13/Java-2048>2048</a></h3>
-            <p>
-              
-            </p>
-            <h3><a href = https://github.com/matthewcheng13/Connect4>Connect Four</a></h3>
-            <p>
-              
-            </p>
-            <h3><a href = https://github.com/matthewcheng13/Java-Maze-Game>Maze Game</a></h3>
-            <p>
-            
-            </p>
-            <h3><a href = https://github.com/matthewcheng13/matthewcheng13.github.io>This Site (Github Pages)</a></h3>
-            <p>
-            
-            </p>
-
+            <div>
+              <span><a href = https://github.com/matthewcheng13/Java-2048>2048</a></span>
+              <button id="2048_show" onClick="showDropdownContent(this.id, '2048_content')" class="show-button">&#9660;</button>
+              <br>
+              <p id="2048_content" style="display: none;">
+                <span>
+                  A full implementation of the game 2048, including the regular gamemode,
+                   a "smart" autosolver, and a "random" autosolver.
+                </span>
+              </p>
+            </div>
+            <div>
+              <span><a href = https://github.com/matthewcheng13/Connect4>Connect Four</a></span>
+              <button id="cf_show" onClick="showDropdownContent(this.id, 'cf_content')" class="show-button">&#9660;</button>
+              <br>
+              <p id="cf_content" style="display: none;">
+                <span>
+                  A full implementation of the game Connect Four. This includes a two player option,
+                  where players should alternate control of the cursor, as well as a one player option,
+                  where the user plays against an AI.
+                </span>
+              </p>
+            </div>
+            <div>
+              <span><a href = https://github.com/matthewcheng13/Java-Maze-Game>Maze Game</a></span>
+              <button id="mg_show" onClick="showDropdownContent(this.id, 'mg_content')" class="show-button">&#9660;</button>
+              <br>
+              <p id="mg_content" style="display: none;">
+                <span>
+                  This game automatically generates mazes for either the user or a robot to solve.
+                  These mazes vary in color and increase in size depending on the level of difficulty.
+                  If the user decides to let a robot solve the maze, there are different robot settings
+                  to choose from that can greatly impact the abilities of the robot. Check out the github
+                  repo for more info!
+                </span>
+              </p>
+            </div>
+            <div>
+              <span><a href = https://github.com/matthewcheng13/matthewcheng13.github.io>This Site (Github Pages)</a></span>
+              <button id="gp_show" onClick="showDropdownContent(this.id, 'gp_content')" class="show-button">&#9660;</button>
+              <br>
+              <p id="gp_content" style="display: none;">
+                <span>
+                  A simple github pages site that I created using HTML, CSS, Javascript, and jQuery.
+                  The purpose of this site is to show off some of my projects, skills, and experiences.
+                  It's also a way to learn a bit more about me. Feel free to contact me if you're interested
+                  in connecting or learning more!
+                </span>
+              </p>
+            </div>
             <h1>Group Projects</h1>
             <h2>Completed</h2>
-            <h3><a href = https://github.com/matthewcheng13/Bloc-React-App>Bloc</a></h3>
-            <p>
-              
-            </p>
+            <div>
+              <span><a href = https://github.com/matthewcheng13/Bloc-React-App>Bloc</a></span>
+              <button id="bl_show" onClick="showDropdownContent(this.id, 'bl_content')" class="show-button">&#9660;</button>
+              <br>
+              <p id="bl_content" style="display: none;">
+                <span>
+                  A React Web App that I created with a group of other students for our
+                  Entrepreneurship class. This demo project was made to
+                  showcase the power of an all-in-one service for students that acts as
+                  a club database, calendar, event planner, and club recommender. It is intended to
+                  simplify the process for joining clubs and organizations as well as participating
+                  in or creating scheduled events. 
+                </span>
+              </p>
+            </div>
             <h2>In Progress</h2>
-            <h3>CodeProbing (private)</h3>
-            <p>
-              
-            </p>
+            <div>
+              <span>CodeProbing (private)</span>
+              <button id="cp_show" onClick="showDropdownContent(this.id, 'cp_content')" class="show-button">&#9660;</button>
+              <br>
+              <p id="cp_content" style="display: none;">
+                <span>
+                  This in progress project will eventually become a Python Library for 
+                  evaluating the quality of Neural Code Models. This library will determine
+                  how well the model performs in four categories, including robustness,
+                  logical consistency, taxonomy, and vocabulary.
+                </span>
+              </p>
+            </div>
+            <br> 
+            <br>
+            <p style="text-align: center;">Check out my github for other personal and class related projects!</p>
           </div>
           
           <div id="education" class="content-region hide">
@@ -128,7 +184,7 @@
 
           <div id="experience" class="content-region hide">
             <p>
-              <span><strong>Application Development Intern - ADP</strong></span>
+              <span><b>Application Development Intern - ADP</b></span>
               <br>
               <span>Norfolk, VA</span>
               <br>
@@ -138,7 +194,7 @@
               
             </ul>
             <p>
-              <span><strong>Software Development Intern - SitScape</strong></span>
+              <span><b>Software Development Intern - SitScape</b></span>
               <br>
               <span>Remote</span>
               <br>
@@ -148,7 +204,7 @@
               
             </ul>
             <p>
-              <span><strong>Intern - SitScape</strong></span>
+              <span><b>Intern - SitScape</b></span>
               <br>
               <span>Remote</span>
               <br>
@@ -160,7 +216,7 @@
           </div>
 
           <div id="personal" class="content-region hide">
-            <h3>Interests</h3>
+            <h3>My Interests</h3>
             <div class="row">
               <div class="column3">
                 <h4>Soccer</h4>
@@ -176,8 +232,9 @@
               </div>
             </div>
             <h3>More about me</h3>
-            <p>I'm from Virginia Beach, VA and going to school in Williamsburg, VA. In addition to soccer, I am willing to play just about any sport. I also love learning and am currently trying to learn several languages on Duolingo.
-            </p>
+            <span>I'm from Virginia Beach, VA and going to school in Williamsburg, VA. </span>
+            <span>In addition to soccer, I am willing to play just about any sport.</span>
+            <span>I also love learning and am currently trying to learn several languages on Duolingo.</span>
           </div>
           
           <div id="contact" class="content-region hide">

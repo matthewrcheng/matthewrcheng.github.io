@@ -27,3 +27,16 @@
   });
   
 })(jQuery);
+
+function showDropdownContent(clicked, toShow) {
+  let button = document.getElementById(clicked);
+  let menu = document.getElementById(toShow)
+
+  if (menu.style.display === "none") {
+    menu.style.display = "inline";
+    button.innerHTML = "&#9650;";
+  } else {
+    menu.style.display = "none";
+    button.innerHTML = "&#9660;";
+  }
+}
