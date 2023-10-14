@@ -18,8 +18,8 @@ a {
   text-decoration: none; 
   color:#EF6D3D;
 }
-a:focus {
-  outline: thin dotted;
+a:hover {
+  text-decoration: underline;
 }
 
 small {
