@@ -169,10 +169,57 @@ ul.main-menu li a.active {
   clear: both;
 }
 
-.show-button {
+/* .show-button {
   font-size: 1rem;
   background:none;
   border:none;
   margin:0;
   cursor: pointer;
+} */
+
+.show-button {
+  font-size: 1rem;
+  background-color: #efefef; /* Light gray background */
+  border: 1px solid #ccc; /* Gray border */
+  padding: 4px 4px; /* Adjust padding for better spacing */
+  cursor: pointer;
+}
+
+.show-button:hover {
+  background-color: #ddd; /* Lighter gray background on hover */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+}
+
+.project-card {
+  background-color: #ffffff;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+}
+
+.content-region.hide h1 {
+  font-size: 3.6rem; 
+  line-height: 1.25; 
+  letter-spacing: -.1rem; 
+  margin-top: 1rem; 
+  margin-bottom: .5rem;
+  text-align: center;
+}
+
+.icon-list {
+  list-style: none;
+  padding: 0;
+  display: flex; /* Use flexbox to align items horizontally */
+  justify-content: center;
+}
+
+.icon-list li {
+  margin-right: 20px; /* Adjust the space between list items */
+}
+
+.icon-list a i {
+  margin-right: 10px; /* Adjust spacing between icon and text */
 }

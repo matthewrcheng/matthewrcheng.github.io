@@ -9,12 +9,18 @@
   <meta name="description" content="Welcome to my github pages site. Here, I detail my education, experience, and personal information.">
   <meta name="author" content="Matthew Cheng">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
-  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- Favicon links -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 
   <!-- Stylesheets -->
   <!-- Reset default styles and add support for google fonts -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
-  <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto" type="text/css" />
   
   <!-- Custom styles -->
   <link href="style.css" rel="stylesheet" type="text/css" />
@@ -26,8 +32,8 @@
     <h1>Matthew Cheng</h1>
     <nav>
       <ul class="main-menu">
-        <li><a href="#home">My Projects </a></li>
-        <li><a href="#education">Education</a></li>
+        <li><a href="#home">Projects </a></li>
+        <li><a href="#education">Skills & Background</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact Info</a></li>
       </ul>  
@@ -39,10 +45,9 @@
       <div id="content"> 
         
         <section id="home" class="content-region hide">
-          <h1>Personal Projects</h1>
-          <h2>Completed</h2>
-          <div>
-            <span><a href = https://github.com/matthewrcheng/Java-2048>2048</a></span>
+          <h1>Games</h1>
+          <div class="project-card">
+            <span><a href = https://github.com/matthewrcheng/Java-2048 target="_blank" rel="noopener noreferrer">2048</a></span>
             <button id="2048_show" onClick="showDropdownContent(this.id, '2048_content')" class="show-button">&#9660;</button>
             <br>
             <p id="2048_content" style="display: none;">
@@ -52,8 +57,8 @@
               </span>
             </p>
           </div>
-          <div>
-            <span><a href = https://github.com/matthewrcheng/Connect4>Connect Four</a></span>
+          <div class="project-card">
+            <span><a href = https://github.com/matthewrcheng/Connect4 target="_blank" rel="noopener noreferrer">Connect Four</a></span>
             <button id="cf_show" onClick="showDropdownContent(this.id, 'cf_content')" class="show-button">&#9660;</button>
             <br>
             <p id="cf_content" style="display: none;">
@@ -64,8 +69,8 @@
               </span>
             </p>
           </div>
-          <div>
-            <span><a href = https://github.com/matthewrcheng/Java-Maze-Game>Maze Game</a></span>
+          <div class="project-card">
+            <span><a href = https://github.com/matthewrcheng/Java-Maze-Game target="_blank" rel="noopener noreferrer">Maze Game</a></span>
             <button id="mg_show" onClick="showDropdownContent(this.id, 'mg_content')" class="show-button">&#9660;</button>
             <br>
             <p id="mg_content" style="display: none;">
@@ -78,8 +83,9 @@
               </span>
             </p>
           </div>
-          <div>
-            <span><a href = https://github.com/matthewrcheng/matthewrcheng.github.io>This Site (Github Pages)</a></span>
+          <h1>Web Development</h1>
+          <div class="project-card">
+            <span><a href = https://github.com/matthewrcheng/matthewrcheng.github.io target="_blank" rel="noopener noreferrer">This Site (Github Pages)</a></span>
             <button id="gp_show" onClick="showDropdownContent(this.id, 'gp_content')" class="show-button">&#9660;</button>
             <br>
             <p id="gp_content" style="display: none;">
@@ -91,10 +97,9 @@
               </span>
             </p>
           </div>
-          <h1>Group Projects</h1>
-          <h2>Completed</h2>
-          <div>
-            <span><a href = https://github.com/matthewrcheng/Bloc-React-App>Bloc</a></span>
+          <h1>Tools</h1>
+          <div class="project-card">
+            <span><a href = https://github.com/matthewrcheng/Bloc-React-App target="_blank" rel="noopener noreferrer">Bloc</a></span>
             <button id="bl_show" onClick="showDropdownContent(this.id, 'bl_content')" class="show-button">&#9660;</button>
             <br>
             <p id="bl_content" style="display: none;">
@@ -108,6 +113,7 @@
               </span>
             </p>
           </div>
+          <div class="project-card">
           <span>CodeProbing (private)</span>
             <button id="cp_show" onClick="showDropdownContent(this.id, 'cp_content')" class="show-button">&#9660;</button>
             <br>
@@ -118,6 +124,35 @@
                 logical consistency, taxonomy, and vocabulary.
               </span>
             </p>
+          </div>
+          <h1>Data Science</h1>
+          <div class="project-card">
+            <span><a href = https://github.com/matthewrcheng/CustomerChurnForecasting target="_blank" rel="noopener noreferrer">Customer Churn Forecasting</a></span>
+            <button id="ccf_show" onClick="showDropdownContent(this.id, 'ccf_content')" class="show-button">&#9660;</button>
+            <br>
+            <p id="ccf_content" style="display: none;">
+              <span>
+                A comprehensive comparison study that delves into the realm of predictive analytics 
+                for a telecommunications company. Using anonymized customer churn data, this project 
+                explores different machine learning techniques to predict customer churn effectively. 
+                The study employs a diverse set of models, including Generalized Additive Modeling, 
+                Nadaraya-Watson Estimator, Deep Learning, DenseNet, and Random Forest Classifier.
+              </span>
+            </p>
+          </div>
+          <div class="project-card">
+            <span><a href = https://github.com/matthewrcheng/LungCancerDetection target="_blank" rel="noopener noreferrer">Lung Cancer Detection</a></span>
+            <button id="lcd_show" onClick="showDropdownContent(this.id, 'lcd_content')" class="show-button">&#9660;</button>
+            <br>
+            <p id="lcd_content" style="display: none;">
+              <span>
+                A deep learning project that leverages transfer learning to explore the intersection of
+                healthcare and technology by attempting to accurately detect lung cancer in CT Scans. Although
+                the dataset for this project was not expansive, it acts as a proof of concept for easing the overwhelming task
+                of CT Scan analysis for doctors. 
+              </span>
+            </p>
+          </div>
           <br> 
           <br>
           <p style="text-align: center;">Check out my github for other personal and class related projects!</p>
@@ -184,7 +219,7 @@
 
         <section id="experience" class="content-region hide">
           <p>
-            <span><b>Software Engineer I - <a href="https://jpmorganchase.com/">JPMorgan Chase & Co.</a></b></span>
+            <span><b>Software Engineer I - <a href="https://jpmorganchase.com/" target="_blank" rel="noopener noreferrer">JPMorgan Chase & Co.</a></b></span>
             <br>
             <span>Wilmington, DE</span>
             <br>
@@ -192,7 +227,7 @@
           </p>
           
           <p>
-            <span><b>Application Development Intern - <a href="https://www.adp.com/">ADP</a></b></span>
+            <span><b>Application Development Intern - <a href="https://www.adp.com/" target="_blank" rel="noopener noreferrer">ADP</a></b></span>
             <br>
             <span>Norfolk, VA</span>
             <br>
@@ -202,7 +237,7 @@
             
           </ul>
           <p>
-            <span><b>Software Development Intern - <a href="https://www.sitscape.com/homepage/index.php">SitScape</a></b></span>
+            <span><b>Software Development Intern - <a href="https://www.sitscape.com/homepage/index.php" target="_blank" rel="noopener noreferrer">SitScape</a></b></span>
             <br>
             <span>Remote</span>
             <br>
@@ -215,11 +250,23 @@
         
         <section id="contact" class="content-region hide">
           <h3>Contact Me!</h3>
-          <ul>
-            <li><a href="img/Cheng-Matthew-Resume.pdf" target="_blank" rel="noopener noreferrer">Email (see Resume)</a></li>
-            <li><a href="https://www.linkedin.com/in/matthew-cheng-7a20161b4/" target="_blank" rel="noopener noreferrer">LinkedIn: Matthew Cheng</a></li>
-            <li><a href="https://www.github.com/matthewrcheng/" target="_blank" rel="noopener noreferrer">Github: matthewrcheng</a></li>
+          <ul class="icon-list">
+            <li><a href="img/Cheng-Matthew-Resume.pdf" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i> Email (see Resume)</a></li>
+            <li><a href="https://www.linkedin.com/in/matthew-cheng-7a20161b4/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn: Matthew Cheng</a></li>
+            <li><a href="https://www.github.com/matthewrcheng/" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Github: matthewrcheng</a></li>
           </ul>
+          <div id="contact-form">
+            <h3>Contact Me!</h3>
+            <form id="message-form">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required><br>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required><br>
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" required></textarea><br>
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
         </section>
         
       </div>

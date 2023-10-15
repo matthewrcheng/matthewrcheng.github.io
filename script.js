@@ -27,4 +27,32 @@ $(document).ready(function() {
           this.innerHTML = "&#9660;";
       }
   });
+
+  // Event listener for form submission
+  $('#message-form').submit(function(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+
+    // Get form data
+    const name = $('#name').val();
+    const email = $('#email').val();
+    const message = $('#message').val();
+
+    // Use EmailJS to send the email
+    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+      from_name: name,
+      from_email: email,
+      message: message,
+    }).then(function(response) {
+      console.log("Email sent successfully:", response);
+      // You can add code here to show a success message to the user
+    }, function(error) {
+      console.error("Email sending failed:", error);
+      // You can add code here to show an error message to the user
+    });
+
+    // Clear the form fields
+    $('#name').val('');
+    $('#email').val('');
+    $('#message').val('');
+  });
 });
