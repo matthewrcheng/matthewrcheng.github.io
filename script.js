@@ -38,7 +38,7 @@ $(document).ready(function() {
     const message = $('#message').val();
 
     // Use EmailJS to send the email
-    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+    emailjs.send(process.env.SERVICE_ID, "Gmail", {
       from_name: name,
       from_email: email,
       message: message,
