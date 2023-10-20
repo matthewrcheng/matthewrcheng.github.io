@@ -37,6 +37,12 @@ $(document).ready(function() {
     const email = $('#email').val();
     const message = $('#message').val();
 
+    const SERVICE_ID = process.env.SERVICE_ID;
+    const TEMPLATE_ID = process.env.TEMPLATE_ID;
+    const PUBLIC_KEY = process.env.PUBLIC_KEY;
+
+    console.log(SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY);
+
     var service, template, key;
 
     try {
