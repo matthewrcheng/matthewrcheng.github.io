@@ -1,0 +1,71 @@
+name: Build, Report Build Status, and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set environment variables
+        run: |
+          echo "SERVICE_ID=${{ secrets.SERVICE_ID }}" >> $GITHUB_ENV
+          echo "TEMPLATE_ID=${{ secrets.TEMPLATE_ID }}" >> $GITHUB_ENV
+          echo "PUBLIC_KEY=${{ secrets.PUBLIC_KEY }}" >> $GITHUB_ENV
+
+      - name: Build with Jekyll
+        run: npx jekyll build
+
+      - name: Run JavaScript file
+        run: node script.js
+        env:
+          SERVICE_ID: ${{ secrets.SERVICE_ID }}
+          TEMPLATE_ID: ${{ secrets.TEMPLATE_ID }}
+          PUBLIC_KEY: ${{ secrets.PUBLIC_KEY }}
+
+  report-build-status:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+
+      - name: Report build status
+        run: |
+          gh api -X POST "repos/$GITHUB_REPOSITORY/pages/telemetry" \
+            -F github_run_id="$GITHUB_RUN_ID" \
+            -F conclusion="$CONCLUSION"
+        env:
+          SERVICE_ID: ${{ secrets.SERVICE_ID }}
+          TEMPLATE_ID: ${{ secrets.TEMPLATE_ID }}
+          PUBLIC_KEY: ${{ secrets.PUBLIC_KEY }}
+
+  deploy:
+    needs: report-build-status
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: jekyll-site
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          artifact-directory: _site
+
+      - name: Evaluate and set environment URL
+        run: |
+          echo "Environment URL: https://$GITHUB_REPOSITORY.github.io/"
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}

@@ -37,8 +37,28 @@ $(document).ready(function() {
     const email = $('#email').val();
     const message = $('#message').val();
 
+    var service, template, key;
+
+    try {
+      if (process.env.SERVICE_ID && process.env.TEMPLATE_ID && process.env.PUBLIC_KEY) {
+        service = process.env.SERVICE_ID;
+        template = process.env.TEMPLATE_ID;
+        key = process.env.PUBLIC_KEY;
+      } else {
+        throw new Error("Environment variables are not set.");
+      }
+    } catch (error) {
+      // Handle the error, fallback to using secret.js
+      console.error("Error accessing environment variables:", error.message);
+      service = window.secret.SERVICE_ID;
+      template = window.secret.TEMPLATE_ID;
+      key = window.secret.PUBLIC_KEY;
+    }
+    
+    emailjs.init(key)
+
     // Use EmailJS to send the email
-    emailjs.send(window.secret.SERVICE_ID, "Gmail", {
+    emailjs.send(service, template, {
       from_name: name,
       from_email: email,
       message: message,
