@@ -13,21 +13,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set environment variables
-        run: |
-          echo "SERVICE_ID=${{ secrets.SERVICE_ID }}" >> $GITHUB_ENV
-          echo "TEMPLATE_ID=${{ secrets.TEMPLATE_ID }}" >> $GITHUB_ENV
-          echo "PUBLIC_KEY=${{ secrets.PUBLIC_KEY }}" >> $GITHUB_ENV
-
       - name: Build with Jekyll
         run: npx jekyll build
-
-      - name: Run JavaScript file
-        run: node script.js
-        env:
-          SERVICE_ID: ${{ secrets.SERVICE_ID }}
-          TEMPLATE_ID: ${{ secrets.TEMPLATE_ID }}
-          PUBLIC_KEY: ${{ secrets.PUBLIC_KEY }}
 
   report-build-status:
     needs: build
@@ -43,10 +30,6 @@ jobs:
           gh api -X POST "repos/$GITHUB_REPOSITORY/pages/telemetry" \
             -F github_run_id="$GITHUB_RUN_ID" \
             -F conclusion="$CONCLUSION"
-        env:
-          SERVICE_ID: ${{ secrets.SERVICE_ID }}
-          TEMPLATE_ID: ${{ secrets.TEMPLATE_ID }}
-          PUBLIC_KEY: ${{ secrets.PUBLIC_KEY }}
 
   deploy:
     needs: report-build-status
