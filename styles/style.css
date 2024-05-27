@@ -12,7 +12,7 @@ body {
   line-height: 1.6;
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #FFFFFF;
-  background: url(img/background.jpeg) center center no-repeat fixed;
+  background: url(../assets/background.jpeg) center center no-repeat fixed;
   background-size: cover;
 }
 
@@ -48,7 +48,7 @@ a:hover {
 /* Full size background image */
 html, #container, .inner { background-color:transparent;}
 html {
-  background:url(img/background.jpeg) center center no-repeat fixed;
+  background:url(../assets/background.jpeg) center center no-repeat fixed;
   background-size:cover;
 }
 body {
