@@ -1,208 +1,199 @@
-/* html is set to 62.5% so that all the REM measurements are based on 10px sizing. So basically 1.5rem = 15px */
-html {
-  font-size: 62.5%;
+/* Dark Mode */
+.dark-mode {
+  background-color: #222;
+  color: #fff;
 }
-body, h1, h2, h3, h4, h5, h6, p {
+
+.dark-mode .left-half {
+  background-color: #333;
+}
+
+.dark-mode .vertical-nav ul li a {
+  color: #fff;
+}
+
+.dark-mode .tech-bubbles span {
+  background-color: #555;
+}
+
+.dark-mode .social-icons a {
+  color: #fff;
+}
+
+.dark-mode a {
+  color: #bb86fc; /* Light purple link color for better visibility */
+}
+
+.dark-mode a:hover {
+  color: #e0aaff; /* Slightly lighter color on hover */
+}
+
+/* */
+body {
   margin: 0;
-  padding: 0;
-}
-
-body {
-  font-size: 1.6rem;
-  line-height: 1.6;
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #FFFFFF;
-  background: url(../assets/background.jpeg) center center no-repeat fixed;
-  background-size: cover;
-}
-
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: 2rem;
-  font-weight: 300;
-}
-
-h1 { font-size: 3.6rem; }
-h2 { font-size: 3.0rem; }
-h3 { font-size: 2.4rem; }
-h4 { font-size: 1.8rem; }
-h5 { font-size: 1.5rem; }
-h6 { font-size: 1.4rem; }
-
-/**
- * Links
- */
-a {
-  text-decoration: none; 
-  color:#EF6D3D;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-/**
- * Layout styles
- */
-
-/* Full size background image */
-html, #container, .inner { background-color:transparent;}
-html {
-  background:url(../assets/background.jpeg) center center no-repeat fixed;
-  background-size:cover;
-}
-body {
-  max-width:800px;
-  margin:25px auto;
-}
-header, #content, footer { 
-  padding:25px;
-}
-
-#content {
-  color:#000000;
-  background:#FFFFFF;
-}
-
-header, footer {
-  text-align: center;
-  background: rgba(0, 136, 255, 0.848); 
-  color:#FFFFFF; 
-}
-
-/* Hide and show */
-#2048_content {
-  display: none;
-}
-
-/* Menu Links */
-ul.main-menu {
-  margin: auto;
-  padding: 0;
+  font-family: Arial, sans-serif;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  list-style: none;
-  width: 80%;
-}
-ul.main-menu li a {
-  margin-right:20px;
-  font-size:2.0rem;
-  border-bottom: solid transparent 3px;
-  color:#cfd2da;
-}
-ul.main-menu li a:hover {
-  color:#FFFFFF;
-}
-ul.main-menu li a.active {
-  color:#FFFFFF;
-  border-bottom-color:#EF6D3D;
+  height: 100vh;
+  color: #333;
 }
 
-/* Utility classes */
-.hide {
-  display:none;
-}
-.show {
-  display:block;
-}
-.column3 {
-  float: left;
-  width: 30%;
-  padding: 10px;
-  text-align: center;
-}
-.column2 {
-  float: left;
-  width: 30%;
-  padding: 10px;
-}
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.show-button {
-  font-size: 1rem;
-  background-color: #efefef; /* Light gray background */
-  border: 1px solid #ccc; /* Gray border */
-  padding: 4px 4px; /* Adjust padding for better spacing */
-  cursor: pointer;
-}
-
-.show-button:hover {
-  background-color: #ddd; /* Lighter gray background on hover */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
-}
-
-.project-card {
-  background-color: #ffffff;
-  border: 1px solid #e1e1e1;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin: 10px;
-  text-align: center;
-}
-
-.content-region.hide h1 {
-  font-size: 3.6rem; 
-  line-height: 1.25; 
-  letter-spacing: -.1rem; 
-  margin-top: 1rem; 
-  margin-bottom: .5rem;
-  text-align: center;
-}
-
-.icon-list {
-  list-style: none;
-  padding: 0;
-  display: flex; /* Use flexbox to align items horizontally */
-  justify-content: center;
-}
-
-.icon-list li {
-  margin-right: 20px; /* Adjust the space between list items */
-}
-
-.icon-list a i {
-  margin-right: 10px; /* Adjust spacing between icon and text */
-}
-
-#contact-form {
-  max-width: 300px;
-  margin: 0 auto;
-  text-align: center; /* Center the text inside the contact-form div */
-}
-
-#message-form {
-  text-align: left; /* Align the text inside the message-form div to the left */
-}
-
-#message-form label,
-#message-form input,
-#message-form textarea {
-  display: block;
-  margin-bottom: 10px;
-}
-
-#message-form input,
-#message-form textarea {
+.container {
+  display: flex;
   width: 100%;
-  padding: 8px;
-  box-sizing: border-box;
 }
 
-#message-form button {
+.right-half {
+  padding: 2%;
   width: 100%;
-  padding: 10px;
-  background-color: #4CAF50;
-  color: white;
+  overflow-y: auto;
+}
+
+.left-half {
+  padding: 2%;
+  width: 100%;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .left-half {
+    width: 30%;
+  }
+
+  .right-half {
+    width: 70%;
+  }
+}
+
+.toggle-container {
+  position: fixed;
+  top: 1%;
+  left: 1%;
+  z-index: 9999;
+}
+.toggle-btn {
+  background: transparent;
   border: none;
   cursor: pointer;
 }
+.dark-toggle {
+  color: white;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
-#message-form button:hover {
-  background-color: #45a049;
+.profile h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.profile .role {
+  font-size: 1.2em;
+  margin: 1% 0;
+}
+
+.profile .description {
+  font-size: 1em;
+  margin: 1% 0 2%;
+}
+
+.vertical-nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.vertical-nav ul li {
+  margin: 1% 0;
+}
+
+.vertical-nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.vertical-nav ul li a.active {
+  color: #007bff;
+  font-size: 1.3em;
+  transition: font-size 0.3s, color 0.3s;
+}
+
+.social-icons a {
+  color: #333;
+  margin: 0 1%;
+  font-size: 1.5em;
+}
+
+.section {
+  margin-bottom: 6%;
+}
+
+.section h2 {
+  font-size: 2em;
+  border-bottom: 2px solid #333;
+  padding-bottom: 1%;
+  margin-bottom: 2%;
+}
+
+.project, .job {
+  margin-bottom: 2%;
+}
+
+.project h3, .job h3 {
+  margin: 0;
+}
+
+.job, .project {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #eee;
+}
+
+.dark-mode .job, .dark-mode .project {
+  background-color: #444;
+  border: 1px solid #666;
+}
+
+.tech-bubbles span {
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+  display: inline-block;
+}
+
+.skills-logos {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.skills-logos img {
+  width: 10vw;
+  height: 10vw;
+  margin: 1%;
 }

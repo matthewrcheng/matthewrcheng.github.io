@@ -4,11 +4,12 @@
 <head>
   <!-- Page setup -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
   <title>Matthew Cheng</title>
-  <meta name="description" content="Welcome to my github pages site. Here, I detail my education, experience, and personal information.">
+  <meta name="description"
+    content="Welcome to my github pages site. Here, I detail my education, experience, and personal information.">
   <meta name="author" content="Matthew Cheng">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
   <!-- Favicon links -->
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
@@ -19,295 +20,331 @@
   <!-- Stylesheets -->
   <!-- Reset default styles and add support for google fonts -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    type="text/css" />
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto" type="text/css" />
-  
+
   <!-- Custom styles -->
   <link href="styles/style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-
-  <header id="header">
-    <h1>Matthew Cheng</h1>
-    <nav>
-      <ul class="main-menu">
-        <li><a href="#home">Projects </a></li>
-        <li><a href="#education">Skills & Background</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact Info</a></li>
-      </ul>  
-    </nav>               
-  </header>
-  
-  <div id="container">
-    <div class="inner">
-      <div id="content"> 
-        
-        <section id="home" class="content-region hide">
-          <h1>Games</h1>
-          <div class="project-card">
-            <span><a href = https://github.com/matthewrcheng/Java-2048 target="_blank" rel="noopener noreferrer">2048</a></span>
-            <button id="2048_show" onClick="showDropdownContent(this.id, '2048_content')" class="show-button">&#9660;</button>
-            <br>
-            <p id="2048_content" style="display: none;">
-              <span>
-                A full implementation of the game 2048, including the regular gamemode,
-                  a "smart" autosolver, and a "random" autosolver.
-              </span>
-            </p>
+  <div class="container">
+    <div class="left-half">
+      <div class="toggle-container">
+        <div class="dropdown">
+          <button class="toggle-btn dropdown-toggle" id="toggleDropdown" aria-haspopup="true" aria-expanded="false">
+            <i id="modeIcon" class="fa-solid fa-circle-half-stroke" onload="toggleMode('auto')"></i>
+          </button>
+          <div class="dropdown-content" aria-labelledby="toggleDropdown">
+            <a href="#" onclick="toggleMode('light')"><i class="fas fa-sun"></i> Light Mode</a>
+            <a href="#" onclick="toggleMode('dark')"><i class="fas fa-moon"></i> Dark Mode</a>
+            <a href="#" onclick="toggleMode('auto')"><i class="fa-solid fa-circle-half-stroke"></i> System Default</a>
           </div>
-          <div class="project-card">
-            <span><a href = https://github.com/matthewrcheng/Connect4 target="_blank" rel="noopener noreferrer">Connect Four</a></span>
-            <button id="cf_show" onClick="showDropdownContent(this.id, 'cf_content')" class="show-button">&#9660;</button>
-            <br>
-            <p id="cf_content" style="display: none;">
-              <span>
-                A full implementation of the game Connect Four. This includes a two player option,
-                where players should alternate control of the cursor, as well as a one player option,
-                where the user plays against an AI.
-              </span>
-            </p>
-          </div>
-          <div class="project-card">
-            <span><a href = https://github.com/matthewrcheng/Java-Maze-Game target="_blank" rel="noopener noreferrer">Maze Game</a></span>
-            <button id="mg_show" onClick="showDropdownContent(this.id, 'mg_content')" class="show-button">&#9660;</button>
-            <br>
-            <p id="mg_content" style="display: none;">
-              <span>
-                This game automatically generates mazes for either the user or a robot to solve.
-                These mazes vary in color and increase in size depending on the level of difficulty.
-                If the user decides to let a robot solve the maze, there are different robot settings
-                to choose from that can greatly impact the abilities of the robot. Check out the github
-                repo for more info!
-              </span>
-            </p>
-          </div>
-          <div class="project-card">
-            <span><a href = https://github.com/matthewrcheng/TowerDefense target="_blank" rel="noopener noreferrer">Tower Defense</a></span>
-            <button id="td_show" onClick="showDropdownContent(this.id, 'td_content')" class="show-button">&#9660;</button>
-            <br>
-            <p id="td_content" style="display: none;">
-              <span>
-                This work in progress project uses pygame to create a tower defense game where the player can place towers to defend against 
-                various enemies across different gamemodes. Towers have different abilities and get stronger as they level up. If the player
-                runs out of health, they lose!
-              </span>
-            </p>
-          </div>
-          <div class="project-card">
-            <span><a href = https://github.com/matthewrcheng/Tetris target="_blank" rel="noopener noreferrer">Tetris</a></span>
-            <button id="tr_show" onClick="showDropdownContent(this.id, 'tr_content')" class="show-button">&#9660;</button>
-            <br>
-            <p id="tr_content" style="display: none;">
-              <span>
-                A full implementation of the game Tetris.
-              </span>
-            </p>
-          </div>
-          <h1>Web Development</h1>
-          <div class="project-card">
-            <span><a href = https://github.com/matthewrcheng/matthewrcheng.github.io target="_blank" rel="noopener noreferrer">This Site (Github Pages)</a></span>
-            <button id="gp_show" onClick="showDropdownContent(this.id, 'gp_content')" class="show-button">&#9660;</button>
-            <br>
-            <p id="gp_content" style="display: none;">
-              <span>
-                A simple github pages site that I created using HTML, CSS, Javascript, and React.
-                The purpose of this site is to show off some of my projects, skills, and experiences.
-                It's also a way to learn a bit more about me. Feel free to contact me if you're interested
-                in connecting or learning more!
-              </span>
-            </p>
-          </div>
-          <h1>Tools</h1>
-          <div class="project-card">
-            <span><a href = https://github.com/matthewrcheng/Bloc-React-App target="_blank" rel="noopener noreferrer">Bloc</a></span>
-            <button id="bl_show" onClick="showDropdownContent(this.id, 'bl_content')" class="show-button">&#9660;</button>
-            <br>
-            <p id="bl_content" style="display: none;">
-              <span>
-                A React Web App that I created with a group of other students for our
-                Entrepreneurship class. This demo project was made to
-                showcase the power of an all-in-one service for students that acts as
-                a club database, calendar, event planner, and club recommender. It is intended to
-                simplify the process for joining clubs and organizations as well as participating
-                in or creating scheduled events. 
-              </span>
-            </p>
-          </div>
-          <div class="project-card">
-          <span>CodeProbing (private)</span>
-            <button id="cp_show" onClick="showDropdownContent(this.id, 'cp_content')" class="show-button">&#9660;</button>
-            <br>
-            <p id="cp_content" style="display: none;">
-              <span>
-                This is a Python Library for evaluating the quality of Neural Code Models. This library will determine
-                how well the model performs in four categories, including robustness,
-                logical consistency, taxonomy, and vocabulary.
-              </span>
-            </p>
-          </div>
-          <h1>Data Science</h1>
-          <div class="project-card">
-            <span><a href = https://github.com/matthewrcheng/CustomerChurnForecasting target="_blank" rel="noopener noreferrer">Customer Churn Forecasting</a></span>
-            <button id="ccf_show" onClick="showDropdownContent(this.id, 'ccf_content')" class="show-button">&#9660;</button>
-            <br>
-            <p id="ccf_content" style="display: none;">
-              <span>
-                A comprehensive comparison study that delves into the realm of predictive analytics 
-                for a telecommunications company. Using anonymized customer churn data, this project 
-                explores different machine learning techniques to predict customer churn effectively. 
-                The study employs a diverse set of models, including Generalized Additive Modeling, 
-                Nadaraya-Watson Estimator, Deep Learning, DenseNet, and Random Forest Classifier.
-              </span>
-            </p>
-          </div>
-          <div class="project-card">
-            <span><a href = https://github.com/matthewrcheng/LungCancerDetection target="_blank" rel="noopener noreferrer">Lung Cancer Detection</a></span>
-            <button id="lcd_show" onClick="showDropdownContent(this.id, 'lcd_content')" class="show-button">&#9660;</button>
-            <br>
-            <p id="lcd_content" style="display: none;">
-              <span>
-                A deep learning project that leverages transfer learning to explore the intersection of
-                healthcare and technology by attempting to accurately detect lung cancer in CT Scans. Although
-                the dataset for this project was not expansive, it acts as a proof of concept for easing the overwhelming task
-                of CT Scan analysis for doctors. 
-              </span>
-            </p>
-          </div>
-          <br> 
-          <br>
-          <p style="text-align: center;">Check out my github for other personal and class related projects!</p>
-        </section>
-        
-        <section id="education" class="content-region hide">
-          <h3>Degree</h3>
-          <p>
-            I am attending UIUC's online Master of Computer Science in Data Science program. I previously attended the College of William and Mary and earned my Bachelor of Science in Computer Science and Data Science focusing on Data Applications.
-          </p>
-          <h3>Languages, Frameworks, and Other Skills</h3>
-          <div class="row">
-            <div class="column2">
-              <ul>
-                <li>Python</li>
-                <li>Java</li>
-                <li>C/C++</li>
-                <li>Javascript</li>
-                <li>R</li>
-                <li>SQL</li>
-                <li>HTML/CSS</li>
-                <li>Go</li>
-              </ul>
-            </div>
-            <div class="column2">
-              <ul>
-                <li>React</li>
-                <li>Flask</li>
-                <li>TensorFlow</li>
-                <li>Keras</li>
-                <li>Hugging Face</li>
-                <li>Apache Spark</li>
-                <li>Spring</li>
-                <li>Maching Learning</li>
-              </ul>
-            </div>
-            <div class="column2">
-              <ul>
-                <li>Docker</li>
-                <li>Kubernetes</li>
-                <li>Git</li>
-                <li>Agile</li>
-                <li>Unit Testing</li>
-                <li>AWS</li>
-                <li>Mocking</li>
-                <li>Terraform</li>
-              </ul>
-            </div>
-          </div>
-          <h3>Honors & Certifications</h3>
+        </div>
+      </div>
+      <div class="profile">
+        <h1>Matthew Cheng</h1>
+        <p class="role">Software Engineer | Student</p>
+        <p class="description">
+          Passionate about problem-solving and creativity, Pursuing an MCS in Data Science at UIUC,
+          Software Engineer at JPMorgan Chase.
+        </p>
+        <nav class="vertical-nav">
           <ul>
-            <li>AWS Certified Cloud Practitioner</li>
-            <li>Dean's List</li>
-            <li>IBM Introduction to Cloud Computing Certification</li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
           </ul>
-          <h3>About Me</h3>
-          <span>
-            I am a driven worker and creative thinker who loves facing challenges.
-            I have a deep passion for learning and I am always trying to improve my skills as well
-            as gain new skills. My love for computer science and data science stemmed from my love of
-            problem solving and my strong need to have an outlet for my creativity. In my free time, I love playing sports, 
-            gardening, and playing games (both board and video).
-          </span>
-        </section>
-
-        <section id="experience" class="content-region hide">
-          <p>
-            <span><b>Software Engineer I - <a href="https://jpmorganchase.com/" target="_blank" rel="noopener noreferrer">JPMorgan Chase & Co.</a></b></span>
-            <br>
-            <span>Wilmington, DE</span>
-            <br>
-            <span>08/2023-Present</span>
-          </p>
-          <ul>
-            
-          </ul>
-          
-          <p>
-            <span><b>Application Development Intern - <a href="https://www.adp.com/" target="_blank" rel="noopener noreferrer">ADP</a></b></span>
-            <br>
-            <span>Norfolk, VA</span>
-            <br>
-            <span>06/2022-08/2022</span>
-          </p>
-          <ul>
-            
-          </ul>
-          <p>
-            <span><b>Software Development Intern - <a href="https://www.sitscape.com/homepage/index.php" target="_blank" rel="noopener noreferrer">SitScape</a></b></span>
-            <br>
-            <span>Remote</span>
-            <br>
-            <span>05/2021-07/2021, 02/2022-05/2022</span>
-          </p>
-          <ul>
-            
-          </ul>
-        </section>
-        
-        <section id="contact" class="content-region hide">
-          <div id="contact-form">
-            <h3>Contact Me!</h3>
-            <!-- <form id="message-form">
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required><br>
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required><br>
-              <label for="message">Message:</label>
-              <textarea id="message" name="message" required></textarea><br>
-              <button type="submit">Send Message</button> -->
-            </form>
-          </div>
-          <ul class="icon-list">
-            <li><a href="assets/Cheng-Matthew-Resume.pdf" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i> Email (see Resume)</a></li>
-            <li><a href="https://www.linkedin.com/in/matthew-cheng-7a20161b4/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn: Matthew Cheng</a></li>
-            <li><a href="https://www.github.com/matthewrcheng/" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Github: matthewrcheng</a></li>
-          </ul>
-        </section>
-        
+        </nav>
+        <div class="social-icons">
+          <a href="https://www.github.com/matthewrcheng/" target="_blank" rel="noopener noreferrer"><i
+              class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/matthew-cheng-7a20161b4/" target="_blank" rel="noopener noreferrer"><i
+              class="fab fa-linkedin"></i></a>
+          <a href="assets/Cheng-Matthew-Resume.pdf" target="_blank" rel="noopener noreferrer">My Resume</a>
+          <a href="mailto:matthewrcheng@gmail.com" target="_blank" rel="noopener noreferrer"><i
+              class="fas fa-envelope"></i></a>
+        </div>
       </div>
     </div>
+    <div class="right-half">
+      <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>
+          I am currently enrolled in the online Master of Computer Science program at UIUC, specializing in Data
+          Science. My academic journey began at the College of William and Mary, where I graduated summa cum laude with
+          a double major in Computer Science and Data Science, focusing on Data Applications.
+        </p>
+        <p>
+          Driven by a passion for problem-solving and creativity, I started my career as a Software Engineer I at
+          JPMorgan Chase through the Software Engineer Program (SEP). In this role, I am constantly challenged and
+          inspired to innovate.
+        </p>
+        <p>
+          I have a deep love for learning and creating and I always strive to improve my skills. I enjoy writing clean,
+          efficient software and I am particulator passionate about Cloud Computing, Big
+          Data, and Machine Learning.
+        </p>
+        <p>
+          Beyond the realm of technology, I find joy in watching and playing sports, gardening, and playing games — both
+          the video and board varieties.
+        </p>
+        <p>
+          My ultimate goal is to utilize my expertise in computer science and data science to drive positive change in
+          the world. I am committed to continuous learning and aspire to push the boundaries of technology, always
+          seeking new ways to make a meaningful impact on society.
+        </p>
+      </section>
+      <section id="skills" class="section">
+        <h2>Skills</h2>
+        <h3>Languages</h3>
+        <div class="skills-logos">
+          <img src="assets/python.png" title="Python" alt="Python">
+          <img src="assets/go.png" title="Go" alt="Go">
+          <img src="assets/java.png" title="Java" alt="Java">
+          <img src="assets/cpp.png" title="C/C++" alt="C/C++">
+          <img src="assets/javascript.png" title="JavaScript" alt="JavaScript">
+        </div>
+
+        <h3>Frameworks</h3>
+        <div class="skills-logos">
+          <img src="assets/react.png" title="React" alt="React">
+          <img src="assets/tensorflow.png" title="TensorFlow" alt="TensorFlow">
+          <img src="assets/keras.png" title="Keras" alt="Keras">
+          <img src="assets/apache_spark.png" title="Apache Spark" alt="Apache Spark">
+        </div>
+
+        <h3>Tools</h3>
+        <div class="skills-logos">
+          <img src="assets/docker.png" title="Docker" alt="Docker">
+          <img src="assets/git.png" title="Git" alt="Git">
+          <img src="assets/aws.png" title="AWS" alt="AWS">
+          <img src="assets/terraform.png" title="Terraform" alt="Terraform">
+        </div>
+
+        <h3>Certifications</h3>
+        <div class="skills-logos">
+          <img src="assets/cloudpractitioner.png" title="AWS Cloud Practitioner" alt="AWS Cloud Practitioner">
+        </div>
+
+      </section>
+      <section id="experience" class="section">
+        <h2>Experience</h2>
+        <div class="job">
+          <h3>Software Engineer I - <a href="https://jpmorganchase.com/" target="_blank"
+              rel="noopener noreferrer">JPMorgan Chase & Co.</a></h3>
+          <p>
+            Wilmington, DE<br>
+            08/2023-Present
+          </p>
+          <p>
+            Development and deployment of data migration pipelines, using AWS services, such as Step
+            Functions, Lambda Functions, S3, and AWS Glue, as well as Terraform, Snowflake, and Apache Spark.<br>
+            Worked closely with data owners, stakeholders, and other data teams to ensure quality and efficient
+            pipelines.<br>
+            Volunteered for the Food Bank of Delaware to integrate Salesforce CRM with their existing tech stack,
+            saving the organization both time and money.<br>
+            Served as a mentor to early career software engineers and interns to offer guidance and advice.
+          </p>
+          <div class="tech-bubbles">
+            <span>AWS</span>
+            <span>Python</span>
+            <span>Terraform</span>
+            <span>Apache Spark</span>
+            <span>Snowflake</span>
+            <span>Salesforce</span>
+          </div>
+        </div>
+        <div class="job">
+          <h3>Application Development Intern - <a href="https://www.adp.com/" target="_blank"
+              rel="noopener noreferrer">ADP</a></h3>
+          <p>
+            Norfolk, VA<br>
+            06/2022-08/2022
+          </p>
+          <p>
+            Engineered and deployed a full stack RESTful API using Python, JavaScript, Flask, Docker, and Kubernetes to
+            serve Network Operations and Management purposes.<br>
+            Automated various tasks for the ADP Networking Team through Python scripts, including software removal and
+            switch port configuration.
+          </p>
+          <div class="tech-bubbles">
+            <span>Python</span>
+            <span>JavaScript</span>
+            <span>Flask</span>
+            <span>Docker</span>
+            <span>Kubernetes</span>
+            <span>REST API</span>
+          </div>
+        </div>
+        <div class="job">
+          <h3>Software Development Intern - <a href="https://www.sitscape.com/homepage/index.php" target="_blank"
+              rel="noopener noreferrer">SitScape</a></h3>
+          <p>
+            Remote<br>
+            05/2021-07/2021, 02/2022-05/2022
+          </p>
+          <p>
+            Worked on DEEP software platform, conducting thorough software testing, resolved bugs, and implemented
+            frontend and backend features to enhance user experience.<br>
+            Pioneered the company's integration of React components.<br>
+            Contributed to the development of video tutorials and a database of UI feature descriptions to aid future
+            employees and customers.
+          </p>
+          <div class="tech-bubbles">
+            <span>JavaScript</span>
+            <span>React</span>
+            <span>Software Testing</span>
+            <span>Frontend Development</span>
+            <span>Backend Development</span>
+          </div>
+        </div>
+      </section>
+      <section id="projects" class="section">
+        <h2>Projects</h2>
+        <h3>Games</h3>
+        <div class="project">
+          <h3><a href="https://github.com/matthewrcheng/Java-2048" target="_blank" rel="noopener noreferrer">2048</a>
+          </h3>
+          <p>
+            A full implementation of the game 2048, including the regular gamemode,
+            a "smart" autosolver, and a "random" autosolver.
+          </p>
+          <div class="tech-bubbles">
+            <span>Java</span>
+          </div>
+        </div>
+        <div class="project">
+          <h3><a href="https://github.com/matthewrcheng/Connect4" target="_blank" rel="noopener noreferrer">Connect
+              Four</a></h3>
+          <p>
+            A full implementation of the game Connect Four. This includes a two player option,
+            where players should alternate control of the cursor, as well as a one player option,
+            where the user plays against an AI.
+          </p>
+          <div class="tech-bubbles">
+            <span>Java</span>
+          </div>
+        </div>
+        <div class="project">
+          <h3><a href="https://github.com/matthewrcheng/Java-Maze-Game" target="_blank" rel="noopener noreferrer">Maze
+              Game</a></h3>
+          <p>
+            This game automatically generates mazes for either the user or a robot to solve.
+            These mazes vary in color and increase in size depending on the level of difficulty.
+            If the user decides to let a robot solve the maze, there are different robot settings
+            to choose from that can greatly impact the abilities of the robot.
+          </p>
+          <div class="tech-bubbles">
+            <span>Java</span>
+          </div>
+        </div>
+        <div class="project">
+          <h3><a href="https://github.com/matthewrcheng/TowerDefense" target="_blank" rel="noopener noreferrer">Tower
+              Defense</a></h3>
+          <p>
+            This work in progress project uses pygame to create a tower defense game where the player can place towers
+            to defend against
+            various enemies across different gamemodes. Towers have different abilities and get stronger as they level
+            up. If the player
+            runs out of health, they lose!
+          </p>
+          <div class="tech-bubbles">
+            <span>Python</span>
+            <span>PyGame</span>
+          </div>
+        </div>
+        <div class="project">
+          <h3><a href="https://github.com/matthewrcheng/Tetris" target="_blank" rel="noopener noreferrer">Tetris</a>
+          </h3>
+          <p>
+            A full implementation of the game Tetris.
+          </p>
+          <div class="tech-bubbles">
+            <span>Python</span>
+          </div>
+        </div>
+        <h3>Web Development</h3>
+        <div class="project">
+          <h3><a href="https://github.com/matthewrcheng/matthewrcheng.github.io" target="_blank"
+              rel="noopener noreferrer">This Site (Github Pages)</a></h3>
+          <p>
+            A simple github pages site that I created using HTML, CSS, Javascript, and React.
+            The purpose of this site is to show off some of my projects, skills, and experiences.
+            It's also a way to learn a bit more about me. Feel free to contact me if you're interested
+            in connecting or learning more!
+          </p>
+          <div class="tech-bubbles">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+        </div>
+        <h3>Tools</h3>
+        <div class="project">
+          <h3><a href="https://github.com/matthewrcheng/Bloc-React-App" target="_blank"
+              rel="noopener noreferrer">Bloc</a></h3>
+          <p>
+            A React Web App that I created with a group of other students for our
+            Entrepreneurship class. This demo project was made to
+            showcase the power of an all-in-one service for students that acts as
+            a club database, calendar, event planner, and club recommender. It is intended to
+            simplify the process for joining clubs and organizations as well as participating
+            in or creating scheduled events.
+          </p>
+          <div class="tech-bubbles">
+            <span>React</span>
+            <span>JavaScript</span>
+          </div>
+        </div>
+        <div class="project">
+          <h3>CodeProbing</h3>
+          <p>
+            This is a private Python Library for evaluating the quality of Neural Code Models. This library will
+            determine
+            how well the model performs in four categories, including robustness,
+            logical consistency, taxonomy, and vocabulary.
+          </p>
+          <div class="tech-bubbles">
+            <span>Python</span>
+          </div>
+        </div>
+        <h3>Data Science</h3>
+        <div class="project">
+          <h3><a href="https://github.com/matthewrcheng/CustomerChurnForecasting" target="_blank"
+              rel="noopener noreferrer">Customer Churn Forecasting</a></h3>
+          <p>
+            A comprehensive comparison study that delves into the realm of predictive analytics
+            for a telecommunications company. Using anonymized customer churn data, this project
+            explores different machine learning techniques to predict customer churn effectively.
+            The study employs a diverse set of models, including Generalized Additive Modeling,
+            Nadaraya-Watson Estimator, Deep Learning, DenseNet, and Random Forest Classifier.
+          </p>
+          <div class="tech-bubbles">
+            <span>Python</span>
+            <span>Machine Learning</span>
+          </div>
+        </div>
+        <div class="project">
+          <h3><a href="https://github.com/matthewrcheng/LungCancerDetection" target="_blank"
+              rel="noopener noreferrer">Lung Cancer Detection</a></h3>
+          <p>
+            A deep learning project that leverages transfer learning to explore the intersection of
+            healthcare and technology by attempting to accurately detect lung cancer in CT Scans. Although
+            the dataset for this project was not expansive, it acts as a proof of concept for easing the overwhelming
+            task
+            of CT Scan analysis for doctors.
+          </p>
+          <div class="tech-bubbles">
+            <span>Python</span>
+            <span>Deep Learning</span>
+          </div>
+        </div>
+      </section>
+    </div>
   </div>
-
-  <footer>
-    Matthew Cheng | 
-    <a href="assets/Cheng-Matthew-Resume.pdf" target="_blank" rel="noopener noreferrer">My Resume</a> |
-    <a href="https://www.linkedin.com/in/matthew-cheng-7a20161b4/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-    <a href="https://www.github.com/matthewrcheng/" target="_blank" rel="noopener noreferrer">Github</a>
-
-  </footer>
-  
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script src="/scripts/script.js"></script>
 </body>
 
