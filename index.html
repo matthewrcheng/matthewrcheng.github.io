@@ -50,17 +50,41 @@
       </div>
       <div class="profile">
         <h1>Matthew Cheng</h1>
-        <p class="role">Software Engineer | Student</p>
+        <p class="role">Software Engineer</p>
         <p class="description">
-          Passionate about problem-solving and creativity, Pursuing an MCS in Data Science at UIUC,
+          Passionate about problem-solving and creativity,
           Software Engineer at JPMorgan Chase.
         </p>
         <nav class="vertical-nav">
           <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li class="nav-section" data-section="about">
+              <a href="#about" class="section-link">About</a>
+            </li>
+            <li class="nav-section" data-section="skills">
+              <a href="#skills" class="section-link">Skills</a>
+              <ul class="subsection-nav">
+                <li><a href="#skills-languages">Languages</a></li>
+                <li><a href="#skills-frameworks">Frameworks</a></li>
+                <li><a href="#skills-tools">Tools</a></li>
+                <li><a href="#skills-ai-cloud">AI & Cloud</a></li>
+                <li><a href="#skills-certifications">Certifications</a></li>
+              </ul>
+            </li>
+            <li class="nav-section" data-section="experience">
+              <a href="#experience" class="section-link">Experience</a>
+              <ul class="subsection-nav">
+                <li><a href="#jpmc">JPMorgan Chase & Co.</a></li>
+                <li><a href="#adp">ADP</a></li>
+                <li><a href="#sitscape">SitScape</a></li>
+              </ul>
+            </li>
+            <li class="nav-section" data-section="projects">
+              <a href="#projects" class="section-link">Projects</a>
+              <ul class="subsection-nav">
+                <li><a href="#projects-games">Games</a></li>
+                <li><a href="#projects-interactive">Interactive</a></li>
+              </ul>
+            </li>
           </ul>
         </nav>
         <div class="social-icons">
@@ -78,32 +102,28 @@
       <section id="about" class="section">
         <h2>About Me</h2>
         <p>
-          I am currently enrolled in the online Master of Computer Science program at UIUC, specializing in Data
-          Science. My academic journey began at the College of William and Mary, where I graduated summa cum laude with
-          a double major in Computer Science and Data Science, focusing on Data Applications.
+          I recently completed the online Master of Computer Science program at UIUC in December 2025. My academic
+          foundation began at the College of William and Mary, where I graduated summa cum laude with a double major
+          in Computer Science and Data Science, focusing on data applications.
         </p>
         <p>
-          Driven by a passion for problem-solving and creativity, I started my career as a Software Engineer I at
-          JPMorgan Chase through the Software Engineer Program (SEP). After a year and a half, I was promoted to 
-          Software Engineer II, marking my early graduation from SEP and taking on more responsibilities.
+          Driven by a passion for problem-solving and creativity, I started my career in Home Lending Technology as a
+          Software Engineer I at JPMorgan Chase through the Software Engineer Program (SEP). After a year and a half,
+          I was promoted to Software Engineer II, marking my early graduation from SEP and taking on more responsibilities.
+          I soon transitioned to the Servicing Agentic AI team in Operations Technology, where I now focus on building 
+          applications that support call center specialists and automate parts of their workflows.
         </p>
         <p>
           I have a deep love for learning and creating and I always strive to improve my skills. I enjoy writing clean,
           efficient software and I am particulator passionate about Cloud Computing, Big Data, and Machine Learning.
         </p>
         <p>
-          Beyond the realm of technology, I find joy in watching and playing sports, gardening, and playing games — both
-          the video and board varieties.
-        </p>
-        <p>
-          My ultimate goal is to utilize my expertise in computer science and data science to drive positive change in
-          the world. I am committed to continuous learning and aspire to push the boundaries of technology, always
-          seeking new ways to make a meaningful impact on society.
+          Outside of work, I enjoy sports, gardening, and games — both video and board games.
         </p>
       </section>
       <section id="skills" class="section">
         <h2>Skills</h2>
-        <h3>Languages</h3>
+        <h3 id="skills-languages">Languages</h3>
         <div class="skills-logos">
           <img src="assets/python.png" title="Python" alt="Python">
           <img src="assets/go.png" title="Go" alt="Go">
@@ -112,7 +132,7 @@
           <img src="assets/javascript.png" title="JavaScript" alt="JavaScript">
         </div>
 
-        <h3>Frameworks</h3>
+        <h3 id="skills-frameworks">Frameworks</h3>
         <div class="skills-logos">
           <img src="assets/react.png" title="React" alt="React">
           <img src="assets/tensorflow.png" title="TensorFlow" alt="TensorFlow">
@@ -120,7 +140,7 @@
           <img src="assets/apache_spark.png" title="Apache Spark" alt="Apache Spark">
         </div>
 
-        <h3>Tools</h3>
+        <h3 id="skills-tools">Tools</h3>
         <div class="skills-logos">
           <img src="assets/docker.png" title="Docker" alt="Docker">
           <img src="assets/git.png" title="Git" alt="Git">
@@ -128,7 +148,10 @@
           <img src="assets/terraform.png" title="Terraform" alt="Terraform">
         </div>
 
-        <h3>Certifications</h3>
+        <h3 id="skills-ai-cloud">AI & Cloud</h3>
+        <p>Python, AWS, AI, LLMs, Amazon Bedrock, MCP, GitHub Copilot, RAG, Google ADK, AI Agents, LangGraph, LangChain</p>
+
+        <h3 id="skills-certifications">Certifications</h3>
         <div class="skills-logos">
           <img src="assets/solutionsarchitect.png" title="AWS Solutions Architect" alt="AWS Solutions Architect">
           <img src="assets/cloudpractitioner.png" title="AWS Cloud Practitioner" alt="AWS Cloud Practitioner">
@@ -138,8 +161,20 @@
       <section id="experience" class="section">
         <h2>Experience</h2>
         <div class="job">
-          <h3><a href="https://jpmorganchase.com/" target="_blank" rel="noopener noreferrer">JPMorgan Chase & Co.</a></h3>
+          <h3 id="jpmc"><a href="https://jpmorganchase.com/" target="_blank" rel="noopener noreferrer">JPMorgan Chase & Co.</a></h3>
           <h3>Software Engineer II, Feb 2025 - Present</h3>
+          <p>
+            Transitioned from the data pipeline team to the Agentic AI team in Servicing, focusing on building AI agents
+            and intelligent workflow automation for customer servicing applications.<br>
+            Developed AI agents and automation workflows that help call center specialists by interpreting customer
+            intent, triggering actions, and supporting human-in-the-loop decision making.<br>
+            Designed and integrated AI-powered solutions within servicing platforms, including speech-to-text workflows
+            that create call transcriptions and enable downstream automation.<br>
+            Partnered with product owners, engineers, and business stakeholders to define AI solutions, architecture,
+            and adoption strategies.<br>
+            Supported enterprise AI enablement as an AI Champion through hackathons, reusable tooling, agent development
+            standards, and consultation for internal teams.
+          </p>
           <h3>Software Engineer I, Aug 2023 - Jan 2025</h3>
           <p>
             Development and deployment of data migration pipelines, using AWS services, such as Step
@@ -162,7 +197,7 @@
           </div>
         </div>
         <div class="job">
-          <h3><a href="https://www.adp.com/" target="_blank" rel="noopener noreferrer">ADP</a></h3>
+          <h3 id="adp"><a href="https://www.adp.com/" target="_blank" rel="noopener noreferrer">ADP</a></h3>
           <h3>Application Development Intern, Summer 2022</h3>
           <p>
             Engineered and deployed a full stack RESTful API using Python, JavaScript, Flask, Docker, and Kubernetes to
@@ -180,7 +215,7 @@
           </div>
         </div>
         <div class="job">
-          <h3><a href="https://www.sitscape.com/homepage/index.php" target="_blank" rel="noopener noreferrer">SitScape</a></h3>
+          <h3 id="sitscape"><a href="https://www.sitscape.com/homepage/index.php" target="_blank" rel="noopener noreferrer">SitScape</a></h3>
           <h3>Software Development Intern, Summer 2021 & Spring 2022</h3>
           <p>
             Worked on DEEP software platform, conducting thorough software testing, resolved bugs, and implemented
@@ -200,7 +235,7 @@
       </section>
       <section id="projects" class="section">
         <h2>Projects</h2>
-        <h3>Games</h3>
+        <h3 id="projects-games">Games</h3>
         <div class="project">
           <h3><a href="https://skystones.matthewrcheng.com/" target="_blank"
               rel="noopener noreferrer">Skystones</a></h3>
@@ -275,7 +310,7 @@
             <span>Python</span>
           </div>
         </div>
-        <h3>Interactive</h3>
+        <h3 id="projects-interactive">Interactive</h3>
         <div class="project">
           <h3><a href="https://matthewrcheng.com/" target="_blank"
               rel="noopener noreferrer">This Site</a></h3>
